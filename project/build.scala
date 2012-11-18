@@ -33,7 +33,8 @@ object build extends Build {
         settings = standardSettings ++ Seq(
             libraryDependencies ++= Seq(
                 "com.typesafe.akka" % "akka-actor" % "2.0"
-            )
+            ),
+            resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
         ) ++ Seq (
             jarName in assembly := "ScalatronCore.jar" // , logLevel in assembly := Level.Debug
         )
@@ -43,7 +44,8 @@ object build extends Build {
         settings = standardSettings ++ Seq(
             libraryDependencies ++= Seq(
                 "com.typesafe.akka" % "akka-actor" % "2.0"
-            )
+            ),
+            resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
         ) ++ Seq (
             jarName in assembly := "BotWar.jar" // , logLevel in assembly := Level.Debug
         )
